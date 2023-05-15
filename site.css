@@ -134,7 +134,7 @@ body {
 tbody:nth-child(odd)  { background-color : #CED4E5; }
 /* Les descendants de rang pair sont stylés avec une autre couleur */
 tbody:nth-child(even) { background-color : #E8EBF5; }
-th { background-color : #557CBA; padding:0.7em; }
+th { background-color : #64abd8; padding:0.7em; }
 td { padding:0.5em; }
 table {
     font-family: Arial, sans-serif;
