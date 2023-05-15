@@ -9,13 +9,12 @@
 <body>
     <header>
         <h1> AMIE : Application Mobile pour les Intervenants de l'Environnement </h1>
-        <p>Ce projet a été réalisé par des étudiants de l'ENSG, l'École Nationale des Sciences Géographiques. 
-          Ce projet s'est réalisé à la demande de l'OFB, l'Office Français de la Biodiversité. 
-          Il s'agissait de créer une application mobile accessible hors ligne pour visualiser les données d'observations à des fins d'utilisation
-          sur le terrain. Aussi pour créer des jeux de données ergonomiques, nous avons créé un outil Tuilator permettant de générer des jeux de données sous forme
-          de tuiles vectorielles et raster. 
-          Voici notre projet AMIE, Application Mobile pour les Inspecteurs de l'Environnement, composé de son application mobile BioViz et de l'outil de tuilage 
-          SmartTuileur.
+        <p>Ce projet a été réalisé par des étudiants de l'ENSG (École Nationale des Sciences Géographiques) dans le cadre du PDI (Projet de Développement Informatique) des élèves ingénieurs de 2ème année et Master première année.
+          La structure commanditaire est la Direction régionale Centre-Val de Loire de l’OFB (Office Français de la Biodiversité)
+          Il a pour objet la création d’une application mobile hors connexion pour une visualisation de données cartographiques nécessaires aux actions de terrain des inspecteurs de l’environnement. 
+          Deux éléments logiciels composent la solution retenue : 
+          -	un outil (Tuilator) permettant de générer des jeux de données sous forme de tuiles vectorielles et raster. 
+          -	une application mobile (BioViz) pour la consultation des données sur le terrain
         </p>
         <div class="container">
           <button type="button" class="button" onclick="window.location.href = 'https://nlanglais.github.io/BioViz'">
@@ -26,9 +25,6 @@
           <thead>
             <tr><th></th><th>BioViz</th><th>SmartTuileur</th></tr>
           </thead>
-          <tbody>
-            <tr><td>Adaptation de l'emprise mobile aux couches de données</td><td><span class="ok"> &#10003;</span></td><td></td></tr>
-          </tbody>
           <tbody>
             <tr><td>Géolocalisation GPS</td><td><span class="ok"> &#10003;</span></td><td></td></tr>
           </tbody>
@@ -57,7 +53,10 @@
             <tr><td>Comportement responsive PC/Mobile Android</td><td><span class="ok"> &#10003;</span></td><td></td></tr>
           </tbody>
           <tbody>
-            <tr><td>Intégration du script python dans QGis</td><td></td><td><span class="ok"> &#10003;</span></td></tr>
+            <tr><td>Compatible avec plusieurs OS (IOS et Android)</td><td><span class="ok"> &#10003;</span></td><td></td></tr>
+          </tbody>
+          <tbody>
+            <tr><td>Interface ergonomique</td><td></td><td><span class="ok"> &#10003;</span></td></tr>
           </tbody>
           <tbody>
             <tr><td>Sélection de l'emprise des données par maille INPN</td><td></td><td><span class="ok"> &#10003;</span></td></tr>
@@ -71,6 +70,9 @@
           <tbody>
             <tr><td>Génération de MBTiles raster</td><td></td><td><span class="ok"> &#10003;</span></td></tr>
           </tbody>
+          <tbody>
+            <tr><td>Avoir un moyen de pérenniser le projet</td><td><span class="ok"> &#10003;</span></td><td><span class="ok"> &#10003;</span></td></tr>
+          </tbody>
         </table>
     </header>
     
@@ -78,25 +80,34 @@
         <hr>
         <section id="app">
           <div>
-            <h2> BioViz : notre application mobile </h2>
-            <p> L'outil central de ce projet est l'application mobile à destination des agents de l'OFB. </p>
+            <h2> BioViz : l’application mobile, web progressive </h2>
+            <p> Spécifiquement paramétrée pour une consultation rapide de données en étant géolocalisé, 
+              cette application offre une navigation fluide sur tout jeu de donnée préalablement chargé. 
+            </p>
           </div>
           <div class="box">
             <div>
               <h3> Visualiser </h3>
-              <p> Il s'agit de proposer une visualisation ergonomique des données d'observation déjà existantes </p>
+              <p> Tout jeu de données vecteur ou raster peut-être visualisé avec une sémiologie définie dans un projet central sous Qgis, 
+                le logiciel SIG qui équipe les agents de l’OFB. 
+              </p>
             </div>
             <div>
               <h3> Hors ligne </h3>
-              <p> L'idée c'est d'y accéder directement sur le terrain, où le réseau n'es pas toujours présent. </p>
+              <p> Fréquemment hors couverture des réseaux de téléphonie mobile, la consultation hors ligne est indispensable aux agents. 
+                L’élection d’emprises adaptées à leur périmètres d’intervention permet d’optimiser le stockage de données haute résolution (raster) 
+                ou volumineuses (données d’observations naturalistes ou sur la continuité écologique)
+              </p>
             </div>
             <div>
               <h3> Localiser </h3>
-              <p> L'agent doit pouvoir accéder à sa position pour analyser son environnement à l'aide des données d'observation. </p>
+              <p> L’utilisateur accède à sa position GPS pour localiser tous les zonages et point d’intérêt à proximité immédiate. </p>
             </div>
             <div>
               <h3> Mesurer </h3>
-              <p> Proposer un outil afin de mesurer une longueur ou une surface donnée sur le terrain. </p>
+              <p> Plusieurs dispositions réglementaires sont dépendantes du dimensionnements d’éléments naturels ou artificiels (plans d’eau, remblais…). 
+                La mesure de terrain rapide peut constituer un outil d’aide à la décision. 
+              </p>
             </div>
           </div>
           
@@ -105,8 +116,32 @@
         <hr>
         <section id="tuilor">
           <h2> SmartTuileur : Générateur de jeux de données tuilés </h2>
-          <p> L'OFB dispose de nombreux jeux de données. </p>
+          <div class="box">
+            <div>
+              <h3> Mettre en forme </h3>
+              <p> L’intégration du composant logiciel à QGIS permet de préparer les données avec toutes les modalités offertes par ce logiciel.
+              </p>
+            </div>
+            <div>
+              <h3> Dimensionner </h3>
+              <p> La volumétrie des fichiers raster aux niveaux de zoom élevée implique des contraintes de stockage et de vitesse d’affichage qui 
+                sont traitées par un dimensionnement d’emprise spatiale adapté aux périmètres d’intervention des agents 
+                (calé sur les grilles de l’INPN (Inventaire national du Patrimoine Naturel))
+              </p>
+            </div>
+            <div>
+              <h3> Multiplier </h3>
+              <p> Les modalités  de sélection multiple des couches de données permettent la production en une seule opération d’un contexte régional multi-thématique. </p>
+            </div>
+            <div>
+              <h3> Partager </h3>
+              <p> La fabrication des tuiles peut bien sûr faire l’objet d’une mutualisation sur un dépôt partagé entre agents de même secteur,
+                 économisant ainsi ressource logicielle, temps de fabrication et échange de bonnes pratiques pour la sémiologie.
+              </p>
+            </div>
+          </div>
         </section>
+        <hr>
       </main>
       <footer>
         <div class="box">
@@ -118,7 +153,7 @@
           </div> 
         </div>
         <div>
-          <p>© 2023 BioViz</p>
+          <p>© 2023 AMIE</p>
         </div>
       </footer>
     </body>
